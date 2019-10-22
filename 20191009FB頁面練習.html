@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        .bluebar {
+            width: 100%;
+            height: 43px;
+            background-color: blue;
+            position: relative;   
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+        .search {
+            width: 229px;
+            height: 24px;
+            background-color: white;
+            position: relative;
+            top: 9px;
+            left: 190px;
+            display: inline-block;
+        }
+        .form-control {
+            width: 229px;
+            height: 24px;
+            display: inline-block;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+        .header {
+            height: 358px;
+            width: 1024px;
+            position: relative;
+            top: 43px;
+            margin-left: auto;
+            margin-right: auto;
+            /* margin: 0 auto; */
+        }
+
+        .header-top {
+
+            width: 1024px;
+            height: 315px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* .header-top:hover {
+            width: 1024px;
+            height: 315px;
+            background-image: url(https://scontent.ftpe2-2.fna.fbcdn.net/v/t31.0-8/15732721_1582393571775820_3928681936388321446_o.jpg?_nc_cat=109&_nc_oc=AQm6fGaC157-9vZCiP5xGpDqqfJds-mPTMGkdwEFGeZ57K5AphxCU2GM7kotxmwO15M&_nc_ht=scontent.ftpe2-2.fna&oh=c6fce5c46b06ddd212616aadedfc38db&oe=5E307920);
+            background-size: cover;
+            background-position: center;
+
+        } */
+
+        .camera-icon {
+            width: 26px;
+            height: 21px;
+            background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/TKtRLQHargk.png);
+            background-repeat: no-repeat;
+            background-size: 73px 385px;
+            background-position: -33px -73px;
+            display: block;
+            text-indent: -9999px;
+            position: relative;
+            top: 0px;
+            left: 46px;
+        }
+
+
+        .header-top-name {
+            color: white;
+            margin-left: 200px;
+            position: relative;
+            top: 252px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .header-btm {
+            background-color: white;
+
+            width: 1024px;
+            height: 62px;
+
+        }
+
+        .header-btm-box1 {
+            width: 113px;
+            height: 43px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 200px;
+            border-left: 1px solid rgb(233 235 238);
+            border-right: 1px solid rgb(233 235 238);
+            font-family: 微軟正黑體;
+            font-weight: bold;
+            text-align: center;
+            color: rgb(56 88 152);
+            display: inline-block;
+            font-size: 15px;
+            padding: 11px;
+        }
+
+        .header-btm-box1:hover {
+            background-color: rgba(0, 0, 0, .1);
+            height: 43px;
+
+        }
+
+        .header-btm-box2 {
+            width: 100px;
+            height: 43px;
+            display: inline-block;
+            vertical-align: top;
+            border-right: 1px solid rgb(233 235 238);
+            font-family: 微軟正黑體;
+            font-weight: bold;
+            text-align: center;
+            color: rgb(56 88 152);
+            display: inline-block;
+            font-size: 15px;
+            padding: 11px;
+            margin-left: -4px;
+        }
+
+        .header-btm-box2:hover {
+            background-color: rgba(0, 0, 0, .1);
+            height: 43px;
+
+        }
+
+        .header-btm-box3 {
+            width: 100px;
+            height: 43px;
+            display: inline-block;
+            vertical-align: top;
+            border-right: 1px solid rgb(233 235 238);
+            font-family: 微軟正黑體;
+            font-weight: bold;
+            text-align: center;
+            color: rgb(56 88 152);
+            display: inline-block;
+            font-size: 15px;
+            padding: 11px;
+            margin-left: -4px;
+        }
+
+        .header-btm-box3:hover {
+            background-color: rgba(0, 0, 0, .1);
+            height: 43px;
+
+        }
+
+        .header-btm-box4 {
+            width: 100px;
+            height: 43px;
+            display: inline-block;
+            vertical-align: top;
+            border-right: 1px solid rgb(233 235 238);
+            font-family: 微軟正黑體;
+            font-weight: bold;
+            text-align: center;
+            color: rgb(56 88 152);
+            display: inline-block;
+            font-size: 15px;
+            padding: 11px;
+            margin-left: -4px;
+        }
+
+        .header-btm-box4:hover {
+            background-color: rgba(0, 0, 0, .1);
+            height: 43px;
+
+        }
+
+
+        .header-btm-box5 {
+            width: 100px;
+            height: 43px;
+            display: inline-block;
+            vertical-align: top;
+            border-right: 1px solid rgb(233 235 238);
+            font-family: 微軟正黑體;
+            font-weight: bold;
+            text-align: center;
+            color: rgb(56 88 152);
+            display: inline-block;
+            font-size: 15px;
+            padding: 11px;
+            margin-left: -4px;
+        }
+
+        .header-btm-box5:hover {
+            background-color: rgba(0, 0, 0, .1);
+            height: 43px;
+
+        }
+
+        .header-btm-box6 {
+            width: 100px;
+            height: 43px;
+            display: inline-block;
+            vertical-align: top;
+            border-right: 1px solid rgb(233 235 238);
+            font-family: 微軟正黑體;
+            font-weight: bold;
+            text-align: center;
+            color: rgb(56 88 152);
+            display: inline-block;
+            font-size: 15px;
+            padding: 11px;
+            margin-left: -4px;
+        }
+
+        .header-btm-box6:hover {
+            background-color: rgba(0, 0, 0, .1);
+            height: 43px;
+
+        }
+        /* .header-avatar:hover {
+            color: rgba(0, 0, 0, .1);
+            width: 168px;
+            height: 168px;
+            border-radius: 84px;
+
+        } */
+
+        .header-R {
+            width: 262.84px;
+            height: 40px;
+            position: absolute;
+            bottom: 50px;
+            right: 20px;
+
+        }
+
+        .header-R-data {
+            background-color: white;
+            width: 90.92px;
+            height: 28px;
+            float: left;
+
+        }
+
+        .button-1 {
+            width: 90.92px;
+            height: 28px;
+            text-align: center;
+            padding: 4px;
+            font-family: 微軟正黑體;
+        }
+
+        .header-R-record {
+            background-color: white;
+            width: 110px;
+            height: 28px;
+            float: left;
+            margin-left: 12px;
+
+        }
+
+        .button-2 {
+            width: 110px;
+            height: 28px;
+            text-align: center;
+            padding: 4px;
+            font-family: 微軟正黑體;
+        }
+
+        .fbicon {
+            width: 24px;
+            height: 24px;
+            background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/y4/r/93ctg3eEz79.png);
+            background-repeat: no-repeat;
+            background-size: 64px 2018px;
+            background-position: 0 -474px;
+            display: block;
+            text-indent: -9999px;
+            position: absolute;
+            top: 9px;
+            left: 160px;
+
+        }
+
+        .all {
+            width: 75%;
+            height: 358px;
+            background-color: slategrey;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .midb {
+            width: 75%;
+            height: 43px;
+            background-color: slateblue;
+            margin: 0 auto;
+        }
+
+        .avatar {
+            width: 168px;
+            height: 168px;
+            background-color: aqua;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-image: url("https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fstartswithabang%2Ffiles%2F2016%2F01%2FMilky_Way_at_Concordia_Camp_Karakoram_Range_Pakistan-1200x800.jpg");
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            border-radius: 99em;
+        }
+        
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div class="bluebar">
+            <div class="search">
+                    <input type="text" class="form-control" placeholder="搜尋人、地點、事物"></div>
+        <div class="fbicon"></div>
+        <div class="header">
+                <div class="header-top">
+                    <div class="camera">
+                        <span class="camera-icon">camera</span>
+                        <!-- <span class="refresh-camera-icon">更新封面照片</span> -->
+                    </div>
+                    <span class="header-top-name"></span>
+                </div>
+                <div class="header-btm">
+                    <div class="header-btm-box1">動態時報</div>
+                    <div class="header-btm-box2">關於</div>
+                    <div class="header-btm-box3">朋友</div>
+                    <div class="header-btm-box4">相片</div>
+                    <div class="header-btm-box5">典藏</div>
+                    <div class="header-btm-box6">更多</div>
+                </div>
+                <div class="header-R">
+                    <div class="header-R-data">
+                        <div class="button-1">更新資料</div>
+                    </div>
+                    <div class="header-R-record">
+                        <div class="button-2">查看活動資料</div>
+                    </div>
+                    <div class="header-R-setup"></div>
+                </div>
+            </div>
+    </div>
+    <div class="all">
+        <div class="avatar"></div>
+    </div>
+    <div class="midb"></div>
+    
+
+</body>
+
+</html>
